@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Installation Guide
@@ -31,6 +31,10 @@ This project is based on the article: [The Next-Generation NIDS Platform: Cloud-
 ## Installation
 
 Here, as an example, we will show you how to set up the Mata Elang Platform.
+
+If you are interested in deploying the Mata Elang Platform locally, you can follow the quick start guide below.
+
+[Quick Start Guide](/mata-elang-stable/mataelang-platform/wiki/quick-start)
 
 <!-- #### All Servers
 
