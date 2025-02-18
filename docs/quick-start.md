@@ -37,7 +37,7 @@ The monitoring interface must be in promiscuous mode.
 
 :::
 
-### Minimum
+### Sensor Minimum
 
 | Component | Minimum Requirement |
 | --- | --- |
@@ -46,7 +46,7 @@ The monitoring interface must be in promiscuous mode.
 | Storage | 50 GB |
 | Network | 1 Gbps |
 
-### Recommended
+### Sensor Recommended
 
 | Component | Recommended Requirement |
 | --- | --- |
