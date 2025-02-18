@@ -5,8 +5,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "Mata Elang",
-  tagline: "Cyber Security Research Group",
+  title: "Mata Elang - Network Monitoring Platform",
+  tagline: "Open Source Network Monitoring Platform",
   favicon: "img/logo-me-blue.png",
 
   // Set the production url of your site here
@@ -111,6 +111,10 @@ const config: Config = {
         {
           title: "Community",
           items: [
+            {
+              label: "Cyber Security Research Group (CSRG) - PENS",
+              href: "https://pens.ac.id",
+            },
             {
               label: "Discord",
               href: "https://discordapp.com/invite/csrg",
