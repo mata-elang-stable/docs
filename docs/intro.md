@@ -40,23 +40,23 @@ Here, as an example, we will show you how to set up the Mata Elang Platform.
 
 Sensor is a network security monitoring platform that uses Snort as the network intrusion detection system (NIDS). The sensor is deployed in the network to monitor the traffic and detect any malicious activities. The sensor sends the logs to the defense center for further analysis and visualization.
 
-Go to the [Sensor Installation and Configuration](Installation-and-Configuration#setting-up-for-sensor) page to set up the sensor.
+Go to the [Sensor Installation and Configuration](#sensor-installation-and-configuration) page to set up the sensor.
 
 ### Defense Center Installation and Configuration
 
 Defense Center is a big data platform that uses Apache Kafka as the distributed messaging system and big data technology orchestrated on lambda architecture. The defense center receives the logs from the sensors, processes the logs, and visualizes the attack statistics.
 
-Go to the [Defense Center Installation and Configuration](Installation-and-Configuration#setting-up-for-defense-center) page to set up the defense center.
+Go to the [Defense Center Installation and Configuration](#defense-center-installation-and-configuration) page to set up the defense center.
 
 ## Operation and Maintenance
 
 This section provides information on how to operate and maintain the Mata Elang Platform. It includes startup and shutdown procedures, user management, sensor management, and troubleshooting.
 
-- [Startup/Shutdown Procedures](Startup-and-Shutdown-Procedures)
+- [Startup/Shutdown Procedures](#operation-and-maintenance)
 - User Management
-  - [OpenSearch User Management](User-Management-(OpenSearch))
+  - [OpenSearch User Management](#operation-and-maintenance)
 - Sensor Management
-  - [Update Sensor Rule](/intro.md)
-  - [Capture Sensor Log and Change Log Limit Size](/intro.md)
-  - [Security Consideration](/intro.md)
-- [Troubleshooting](Troubleshooting)
+  - [Update Sensor Rule](#operation-and-maintenance)
+  - [Capture Sensor Log and Change Log Limit Size](#operation-and-maintenance)
+  - [Security Consideration](#operation-and-maintenance)
+- [Troubleshooting](#operation-and-maintenance)
