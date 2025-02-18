@@ -7,7 +7,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Mata Elang - Network Monitoring Platform",
   tagline: "Open Source Network Monitoring Platform",
-  favicon: "img/logo-me-blue.png",
+  favicon: "img/favicon.ico",
 
   // Set the production url of your site here
   url: "https://mataelang.net",
@@ -74,7 +74,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/logo-me-blue.jpg",
+    image: "img/logo-me-red.png",
     navbar: {
       title: "Mata Elang Platform",
       logo: {
