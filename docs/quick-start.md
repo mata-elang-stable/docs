@@ -1,10 +1,12 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Quick Start Guide
 
 This guide will help you to get started with Mata Elang. Mata Elang is a network security platform that provides network intrusion detection and prevention system (NIDS/NIPS) capabilities. It is designed to help you monitor and secure your network infrastructure.
+
+See the [Introduction](/docs/intro.md) for more information.
 
 ## Defense Center - Hardware Requirements
 
