@@ -74,9 +74,9 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/logo-me-blue.jpg",
     navbar: {
-      title: "Mata Elang",
+      title: "Mata Elang Platform",
       logo: {
         alt: "Mata Elang Logo",
         src: "img/logo-me-red.png",

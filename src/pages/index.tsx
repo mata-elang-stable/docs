@@ -33,8 +33,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title}`}
+      description="Mata Elang is the evolution of Mata Garuda Internet Monitoring Project for Indonesia. This project was initialized as private repository in 2018 by LabJarkomC307 - Politeknik Elektronika Negeri Surabaya (PENS). Currently, Mata Elang become one of collaboration research between PENS, Universitas Indonesia and BPPT. This project is supported by JICA.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
