@@ -1,15 +1,10 @@
 import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import { themes as prismThemes } from "prism-react-renderer";
-import VersionsArchived from './versionsArchived.json';
 import versions from './versions.json';
+import VersionsArchived from './versionsArchived.json';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
-const ArchivedVersionsDropdownItems = Object.entries(VersionsArchived).splice(
-  0,
-  5,
-);
+// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...);
 
 function isPrerelease(version: string) {
   return (
@@ -21,7 +16,7 @@ function isPrerelease(version: string) {
 }
 
 function getLastStableVersion() {
-  const lastStableVersion = versions.find((version) => !isPrerelease(version));
+  const lastStableVersion = versions.sort().reverse().find((version) => !isPrerelease(version));
   if (!lastStableVersion) {
     throw new Error('unexpected, no stable version?');
   }
@@ -29,13 +24,13 @@ function getLastStableVersion() {
 }
 const announcedVersion = getAnnouncedVersion();
 
-function getLastStableVersionTuple(): [string, string] {
+function getLastStableVersionTuple(): [string, string, string] {
   const lastStableVersion = getLastStableVersion();
   const parts = lastStableVersion.split('.');
-  if (parts.length !== 2) {
+  if (parts.length !== 3) {
     throw new Error(`Unexpected stable version name: ${lastStableVersion}`);
   }
-  return [parts[0]!, parts[1]!];
+  return [parts[0]!, parts[1]!, parts[2]!];
 }
 
 // The version announced on the homepage hero and announcement banner
@@ -48,7 +43,7 @@ function getAnnouncedVersion() {
 
 // This probably only makes sense for the alpha/beta/rc phase, temporary
 function getNextVersionName() {
-  return 'Canary';
+  return '2.0.0-rc';
   /*
   const expectedPrefix = '2.0.0-rc.';
 
@@ -113,15 +108,14 @@ const config: Config = {
           lastVersion: "current",
           versions: {
             current: {
-              label: "1.1",
-              path: "1.1",
+              label: "latest - " + getLastStableVersion(),
+              path: "latest",
             },
-            2.0: {
-              label: "2.0",
-              path: "2.0",
-              banner: "unreleased",
-              badge: true
-            },
+            [getNextVersionName()]: {
+              label: getNextVersionName(),
+              path: getNextVersionName(),
+              banner: 'unreleased',
+            }
           },
         },
         blog: {
@@ -189,10 +183,10 @@ const config: Config = {
               className: 'dropdown-archived-versions',
               value: '<b>Archived versions</b>',
             },
-            ...ArchivedVersionsDropdownItems.map(
-              ([versionName, versionUrl]) => ({
+            ...VersionsArchived.map(
+              (versionName) => ({
                 label: versionName,
-                href: versionUrl,
+                to: `/docs/${versionName}/intro`,
               }),
             ),
             {

@@ -1,3 +1,3 @@
-declare const versionsArchived: {[key: string]: string};
+declare const versionsArchived: string[];
 
 export default versionsArchived;
