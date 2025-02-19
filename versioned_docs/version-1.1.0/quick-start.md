@@ -2,9 +2,6 @@
 sidebar_position: 2
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # Quick Start Guide
 
 This guide will help you to get started with Mata Elang. Mata Elang is a network security platform that provides network intrusion detection system (NIDS) capabilities. It is designed to help you monitor and protect your network from malicious activities.
@@ -18,20 +15,20 @@ In the latest version of Mata Elang, there are huge improvements in terms of per
 ### Defense Center - Minimum
 
 | Component | Minimum Requirement |
-| --- | --- |
-| CPU | 4 cores |
-| RAM | 8 GB |
-| Storage | 100 GB |
-| Network | 1 Gbps |
+| --------- | ------------------- |
+| CPU       | 4 cores             |
+| RAM       | 8 GB                |
+| Storage   | 100 GB              |
+| Network   | 1 Gbps              |
 
 ### Defense Center - Recommended
 
 | Component | Recommended Requirement |
-| --- | --- |
-| CPU | 8 cores |
-| RAM | 16 GB |
-| Storage | 200 GB |
-| Network | 1 Gbps |
+| --------- | ----------------------- |
+| CPU       | 8 cores                 |
+| RAM       | 16 GB                   |
+| Storage   | 200 GB                  |
+| Network   | 1 Gbps                  |
 
 ### Sensor - Hardware Requirements
 
@@ -47,20 +44,20 @@ The monitoring interface must be in [**promiscuous mode**](https://www.blumira.c
 ### Sensor Minimum
 
 | Component | Minimum Requirement |
-| --- | --- |
-| CPU | 2 cores |
-| RAM | 2 GB |
-| Storage | 50 GB |
-| Network | 1 Gbps |
+| --------- | ------------------- |
+| CPU       | 2 cores             |
+| RAM       | 2 GB                |
+| Storage   | 50 GB               |
+| Network   | 1 Gbps              |
 
 ### Sensor Recommended
 
 | Component | Recommended Requirement |
-| --- | --- |
-| CPU | 4 cores |
-| RAM | 4 GB |
-| Storage | 120 GB |
-| Network | 1 Gbps |
+| --------- | ----------------------- |
+| CPU       | 4 cores                 |
+| RAM       | 4 GB                    |
+| Storage   | 120 GB                  |
+| Network   | 1 Gbps                  |
 
 ## Software Requirements
 
@@ -90,89 +87,6 @@ Using the official Docker repository is recommended to get the latest version an
 :::
 
 ### Installing Mata Elang Sensor
-
-<Tabs
-  className="unique-tabs"
-  defaultValue="docker-compose"
-  values={[
-    {label: 'Docker Compose', value: 'docker-compose'},
-    {label: 'Docker CLI', value: 'docker-cli'},
-  ]}>
-  <TabItem value="docker-compose">
-
-    Create a `compose.yml` file with the following content.
-
-    ```yaml title="compose.yml" showLineNumbers
-    volumes:
-      snort_log:
-        driver: local
-        driver_opts:
-          type: tmpfs
-          device: tmpfs
-          o: size=1g,uid=1000
-      snort_data:
-
-    services:
-      snort:
-        image: ghcr.io/mata-elang-stable/snort3-docker-image:v2.0-debian
-        restart: unless-stopped
-        network_mode: host
-        env_file:
-          - .env
-        volumes:
-          - snort_log:/var/log/snort:rw
-          - snort_data:/usr/local/etc/snort3:rw
-          - ./custom.rules:/usr/local/etc/snort3/rules/local.rules:ro
-          - ./rules:/tmp/rules:ro
-        deploy:
-          mode: replicated
-          replicas: 1
-          restart_policy:
-            condition: unless-stopped
-            delay: 10s
-          resources:
-            limits:
-              cpus: "1"
-              memory: 512M
-
-        snort-parser:
-          image: ghcr.io/mata-elang-stable/sensor-snort-service:latest
-          restart: unless-stopped
-          command: "client -v"
-          depends_on:
-            - snort
-          env_file:
-            - .env
-          volumes:
-            - snort_log:/var/log/snort:rw
-          deploy:
-            mode: replicated
-            replicas: 1
-            restart_policy:
-              condition: unless-stopped
-              delay: 10s
-            resources:
-              limits:
-              cpus: "1"
-              memory: 512M
-    ```
-
-    Then, run the following command to start the sensor.
-
-    ```bash
-    docker compose up -d
-    ```
-
-  </TabItem>
-  <TabItem value="docker-cli">
-
-  ```bash
-  docker run -d --name mataelang-sensor-snort \
-
-  ```
-
-  </TabItem>
-</Tabs>
 
 ## Configuration
 

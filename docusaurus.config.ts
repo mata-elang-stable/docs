@@ -44,19 +44,6 @@ function getAnnouncedVersion() {
 // This probably only makes sense for the alpha/beta/rc phase, temporary
 function getNextVersionName() {
   return '2.0.0-rc';
-  /*
-  const expectedPrefix = '2.0.0-rc.';
-
-  const lastReleasedVersion = versions[0];
-  if (!lastReleasedVersion || !lastReleasedVersion.includes(expectedPrefix)) {
-    throw new Error(
-      'this code is only meant to be used during the 2.0 alpha/beta/rc phase.',
-    );
-  }
-  const version = parseInt(lastReleasedVersion.replace(expectedPrefix, ''), 10);
-  return `${expectedPrefix}${version + 1}`;
-
-   */
 }
 
 
