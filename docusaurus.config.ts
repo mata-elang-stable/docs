@@ -1,8 +1,51 @@
 import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import { themes as prismThemes } from "prism-react-renderer";
+import versions from './versions.json';
+import VersionsArchived from './versionsArchived.json';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...);
+
+function isPrerelease(version: string) {
+  return (
+    version.includes('-') ||
+    version.includes('alpha') ||
+    version.includes('beta') ||
+    version.includes('rc')
+  );
+}
+
+function getLastStableVersion() {
+  const lastStableVersion = versions.sort().reverse().find((version) => !isPrerelease(version));
+  if (!lastStableVersion) {
+    throw new Error('unexpected, no stable version?');
+  }
+  return lastStableVersion;
+}
+const announcedVersion = getAnnouncedVersion();
+
+function getLastStableVersionTuple(): [string, string, string] {
+  const lastStableVersion = getLastStableVersion();
+  const parts = lastStableVersion.split('.');
+  if (parts.length !== 3) {
+    throw new Error(`Unexpected stable version name: ${lastStableVersion}`);
+  }
+  return [parts[0]!, parts[1]!, parts[2]!];
+}
+
+// The version announced on the homepage hero and announcement banner
+// 3.3.2 => 3.3
+// 3.0.5 => 3.0
+function getAnnouncedVersion() {
+  const [major, minor] = getLastStableVersionTuple();
+  return `${major}.${minor}`;
+}
+
+// This probably only makes sense for the alpha/beta/rc phase, temporary
+function getNextVersionName() {
+  return '2.0.0-rc';
+}
+
 
 const config: Config = {
   title: "Mata Elang - Network Monitoring Platform",
@@ -49,6 +92,18 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          lastVersion: "current",
+          versions: {
+            current: {
+              label: "latest - " + getLastStableVersion(),
+              path: "latest",
+            },
+            [getNextVersionName()]: {
+              label: getNextVersionName(),
+              path: getNextVersionName(),
+              banner: 'unreleased',
+            }
+          },
         },
         blog: {
           showReadingTime: true,
@@ -73,6 +128,14 @@ const config: Config = {
   ],
 
   themeConfig: {
+    colorMode: {
+      defaultMode: "light",
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+    mermaid: {
+      theme: {light: 'neutral', dark: 'forest'},
+    },
     // Replace with your project's social card
     image: "img/logo-me-red.png",
     navbar: {
@@ -89,6 +152,52 @@ const config: Config = {
           label: "Tutorial",
         },
         { to: "/blog", label: "Blog", position: "left" },
+        {
+          type: 'search',
+          position: 'right',
+        },
+        {
+          type: 'docsVersionDropdown',
+          position: 'right',
+          // dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
+          dropdownItemsAfter: [
+            {
+              type: 'html',
+              value: '<hr class="dropdown-separator">',
+            },
+            {
+              type: 'html',
+              className: 'dropdown-archived-versions',
+              value: '<b>Archived versions</b>',
+            },
+            ...VersionsArchived.map(
+              (versionName) => ({
+                label: versionName,
+                to: `/docs/${versionName}/intro`,
+              }),
+            ),
+            {
+              type: 'html',
+              value: '<hr class="dropdown-separator">',
+            },
+            {
+              to: '/versions',
+              label: 'All versions',
+            },
+          ],
+          dropdownActiveClassDisabled: true,
+          label: 'Version:',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'left',
+          dropdownItemsAfter: [
+            // {
+            //   to: 'https://my-site.com/help-us-translate',
+            //   label: 'Help us translate',
+            // },
+          ],
+        },
         {
           href: "https://github.com/mata-elang-stable",
           label: "GitHub",
@@ -138,8 +247,9 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Mata Elang. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.oneLight,
+      darkTheme: prismThemes.oneDark,
+      additionalLanguages: ['bash', 'yaml'],
     },
   } satisfies Preset.ThemeConfig,
 };

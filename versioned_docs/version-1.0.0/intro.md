@@ -10,8 +10,6 @@ Snort is a well-known, signature-based network intrusion detection system (NIDS)
 
 ## Project Overview
 
-![MataElang-v2-Architecture](/img/MataElangv2Architecture.png)
-
 Mata Elang is the evolution of the Mata Garuda Internet Monitoring Project for Indonesia. This project was initialized as a private repository in 2018 by LabJarkomC307 - Politeknik Elektronika Negeri Surabaya. Currently, Mata Elang is a collaboration research between PENS, Universitas Indonesia, and BRIN (Badan Riset dan Inovasi Nasional). Mata Elang is supported by JICA.
 
 This project is based on the article: [The Next-Generation NIDS Platform: Cloud-Based Snort NIDS Using Containers and Big Data](https://www.mdpi.com/2504-2289/6/1/19)
@@ -29,34 +27,6 @@ This project is based on the article: [The Next-Generation NIDS Platform: Cloud-
 ```
 
 ## Mata Elang Platform Architecture
-
-```mermaid
-flowchart LR
-    subgraph Mata Elang Sensor #1
-      A[Snort]-->B[Parser]
-    end
-
-    subgraph Mata Elang Sensor #2
-      C[Snort]-->D[Parser]
-    end
-
-    subgraph Mata Elang Sensor #3
-      E[Snort]-->F[Parser]
-    end
-
-    subgraph Mata Elang Defense Center
-      G[Sensor API]-->H[Apache Kafka]
-      H-->I[OpenSearch]
-      I-->J[OpenSearch Dashboards]
-      H-->K[OpenCTI Connector]
-      K-->L[OpenCTI Platform]
-      H-->M[Reporting]
-    end
-
-    B-->G
-    D-->G
-    F-->G
-```
 
 ## Installation
 
