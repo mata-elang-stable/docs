@@ -6,47 +6,6 @@ import VersionsArchived from './versionsArchived.json';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...);
 
-function isPrerelease(version: string) {
-  return (
-    version.includes('-') ||
-    version.includes('alpha') ||
-    version.includes('beta') ||
-    version.includes('rc')
-  );
-}
-
-function getLastStableVersion() {
-  const lastStableVersion = versions.sort().reverse().find((version) => !isPrerelease(version));
-  if (!lastStableVersion) {
-    throw new Error('unexpected, no stable version?');
-  }
-  return lastStableVersion;
-}
-const announcedVersion = getAnnouncedVersion();
-
-function getLastStableVersionTuple(): [string, string, string] {
-  const lastStableVersion = getLastStableVersion();
-  const parts = lastStableVersion.split('.');
-  if (parts.length !== 3) {
-    throw new Error(`Unexpected stable version name: ${lastStableVersion}`);
-  }
-  return [parts[0]!, parts[1]!, parts[2]!];
-}
-
-// The version announced on the homepage hero and announcement banner
-// 3.3.2 => 3.3
-// 3.0.5 => 3.0
-function getAnnouncedVersion() {
-  const [major, minor] = getLastStableVersionTuple();
-  return `${major}.${minor}`;
-}
-
-// This probably only makes sense for the alpha/beta/rc phase, temporary
-function getNextVersionName() {
-  return '2.0.0-rc';
-}
-
-
 const config: Config = {
   title: "Mata Elang - Network Monitoring Platform",
   tagline: "Open Source Network Monitoring Platform",
@@ -92,16 +51,23 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          lastVersion: "current",
+          lastVersion: "1.1.0",
           versions: {
             current: {
-              label: "latest - " + getLastStableVersion(),
-              path: "latest",
-            },
-            [getNextVersionName()]: {
-              label: getNextVersionName(),
-              path: getNextVersionName(),
+              label: "2.0.0-rc",
+              path: "2.0.0-rc",
               banner: 'unreleased',
+            },
+            "1.1.0": {
+              label: "1.1.0",
+              path: "1.1.0",
+              badge: true,
+            },
+            "1.0.0": {
+              label: "1.0.0",
+              path: "1.0.0",
+              badge: true,
+              banner: 'unmaintained',
             }
           },
         },
