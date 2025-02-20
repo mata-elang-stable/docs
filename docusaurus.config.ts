@@ -33,6 +33,23 @@ const config: Config = {
   i18n: {
     defaultLocale: "en",
     locales: ["en", "id"],
+    path: 'i18n',
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+        calendar: 'gregory',
+        path: 'en',
+      },
+      fa: {
+        label: 'Indonesia',
+        direction: 'rtl',
+        htmlLang: 'id-ID',
+        calendar: 'gregory',
+        path: 'id',
+      },
+    },
   },
 
   markdown: {
@@ -49,17 +66,19 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // editUrl:
+          //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           lastVersion: "1.1.0",
+          includeCurrentVersion: true,
           versions: {
             current: {
               label: "2.0.0-rc",
               path: "2.0.0-rc",
               banner: 'unreleased',
+              badge: true,
             },
             "1.1.0": {
-              label: "1.1.0",
+              label: "1.1.0 (latest)",
               path: "1.1.0",
               badge: true,
             },
@@ -79,8 +98,8 @@ const config: Config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // editUrl:
+          //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
@@ -154,16 +173,16 @@ const config: Config = {
           dropdownActiveClassDisabled: true,
           label: 'Version:',
         },
-        {
-          type: 'localeDropdown',
-          position: 'left',
-          dropdownItemsAfter: [
-            // {
-            //   to: 'https://my-site.com/help-us-translate',
-            //   label: 'Help us translate',
-            // },
-          ],
-        },
+        // {
+        //   type: 'localeDropdown',
+        //   position: 'left',
+        //   dropdownItemsAfter: [
+        //     // {
+        //     //   to: 'https://my-site.com/help-us-translate',
+        //     //   label: 'Help us translate',
+        //     // },
+        //   ],
+        // },
         {
           href: "https://github.com/mata-elang-stable",
           label: "GitHub",
