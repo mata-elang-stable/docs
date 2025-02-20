@@ -5,6 +5,7 @@ import Heading from '@theme/Heading';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
 import type { ReactNode } from 'react';
+import versions from '../../versions.json';
 
 import Translate, {translate} from '@docusaurus/Translate';
 
@@ -23,7 +24,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/latest/quick-start">
+            to={`/docs/${versions.sort().reverse()[0]}/quick-start`}>
             <Translate>Quick Start Guide 🚀</Translate>
           </Link>
         </div>

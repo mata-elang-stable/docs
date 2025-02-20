@@ -198,7 +198,7 @@ const config: Config = {
           items: [
             {
               label: "Tutorial",
-              to: "/docs/latest/quick-start",
+              to: `/docs/${versions.sort().reverse()[0]}/quick-start`,
             },
           ],
         },
