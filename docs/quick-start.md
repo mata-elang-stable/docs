@@ -492,12 +492,6 @@ Using the official Docker repository is recommended to get the latest version an
    docker-compose up -d
    ```
 
-5. Run the following command to start the sensor
-
-   ```bash
-   docker-compose up -d
-   ```
-
   </TabItem>
 </Tabs>
 
