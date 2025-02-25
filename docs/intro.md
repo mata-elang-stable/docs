@@ -31,6 +31,13 @@ This project is based on the article: [The Next-Generation NIDS Platform: Cloud-
 ## Mata Elang Platform Architecture
 
 ```mermaid
+---
+config:
+  layout: elk
+  elk:
+    mergeEdges: false
+    nodePlacementStrategy: SIMPLE 
+---
 flowchart LR
     subgraph Mata Elang Sensor #1
       A[Snort]-->B[Parser]
