@@ -51,7 +51,7 @@ For the best practice, please refer to the [Docker Official Documentation](https
 Using the official Docker repository is recommended to get the latest version and security updates.
 :::
 
-## Installation
+## Installation & Configuration
 
 ### Installing Mata Elang Defense Center
 
@@ -501,6 +501,6 @@ Using the official Docker repository is recommended to get the latest version an
   </TabItem>
 </Tabs>
 
-## Configuration
-
 ## Accessing the Dashboard
+
+After successfully installing the Mata Elang Defense Center, you can access the dashboard by visiting [http://localhost:5601](http://localhost:5601) in your web browser.
