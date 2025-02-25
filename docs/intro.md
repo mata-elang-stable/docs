@@ -38,31 +38,35 @@ config:
     mergeEdges: false
     nodePlacementStrategy: SIMPLE 
 ---
-flowchart LR
-    subgraph Mata Elang Sensor #1
-      A[Snort]-->B[Parser]
+graph LR
+    network_isp(Internet)
+    network_router(Router)
+    network_tapper(Tapper)
+
+    sensor1_snort(Snort v3)
+    sensor1_parser(Sensor Parser)
+
+    dc_sensor_api(Sensor API Server)
+    dc_kafka(Apache Kafka)
+    dc_opensearch(OpenSearch)
+    dc_dashboard(OpenSearch Dashboard)
+
+    subgraph Site A
+        network_isp-->network_tapper
+        network_tapper-->network_router
+        network_tapper-->sensor1_snort
+        
+        subgraph me_sensor1[Mata Elang Sensor]
+            sensor1_snort-->sensor1_parser
+        end
     end
 
-    subgraph Mata Elang Sensor #2
-      C[Snort]-->D[Parser]
+    subgraph me_dc[Mata Elang Defense Center]
+        sensor1_parser-->dc_sensor_api
+        dc_sensor_api-->dc_kafka
+        dc_kafka-->dc_opensearch
+        dc_opensearch-->dc_dashboard
     end
-
-    subgraph Mata Elang Sensor #3
-      E[Snort]-->F[Parser]
-    end
-
-    subgraph Mata Elang Defense Center
-      G[Sensor API]-->H[Apache Kafka]
-      H-->I[OpenSearch]
-      I-->J[OpenSearch Dashboards]
-      H-->K[OpenCTI Connector]
-      K-->L[OpenCTI Platform]
-      H-->M[Reporting]
-    end
-
-    B-->G
-    D-->G
-    F-->G
 ```
 
 ## Installation
