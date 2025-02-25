@@ -119,7 +119,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     mermaid: {
-      theme: {light: 'neutral', dark: 'forest'},
+      theme: {light: 'neutral', dark: 'dark'},
     },
     // Replace with your project's social card
     image: "img/logo-me-red.png",
