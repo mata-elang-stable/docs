@@ -1,8 +1,7 @@
 ---
 title: Startup and Shutdown Procedures
+sidebar_position: 5
 ---
-
-# Startup and Shutdown Procedures
 
 Use this command to start the Mata Elang system.
 

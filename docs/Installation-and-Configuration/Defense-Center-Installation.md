@@ -1,8 +1,6 @@
 ---
-title: Defense Center Installation and Configuration
+title: Mata Elang Defense Center
 ---
-
-# Installation - Defense Center
 
 ## Prerequisite
 
@@ -18,7 +16,8 @@ sudo apt update && sudo apt -y upgrade
 [Docker Official Documentation](https://docs.docker.com/engine/install/).
 
 :warning: **NOTE:** You can check Docker version on your host using this command:
-```
+
+```bash
 docker -v
 ```
 

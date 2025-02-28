@@ -1,0 +1,7 @@
+position: 3
+label: Installation and Configuration
+collapsible: true # make the category collapsible
+collapsed: false # keep the category open by default
+link:
+  type: generated-index
+  description: Mata Elang Platform have two main components, Mata Elang Sensor and Mata Elang Defense Center. In this section, you will find the installation and configuration guide for both components.

@@ -1,3 +1,7 @@
+---
+title: OpenSearch Dashboard
+sidebar_position: 10
+---
 
 Here is how you monitor the Mata Elang v2 system using OpenSearch Dashboard.
 
@@ -66,6 +70,7 @@ This table inform you of top 10 most malicious alert recorded by classification 
 ## Alerts by Priority Table Reading
 
 ![image-11](../static/uploads/308a03c50c3723061b1da8259fe18a0b/image-11.png)
+
 This table informs you about total alerts categorized by priority (explained by color lists on left) that represented as Y - Axis per 60 minutes of time interval represented as X - Axis that visualized as dots.
 
 ## Alerts by Protocol Table Reading
@@ -105,7 +110,6 @@ This table informs you about the top 10 most frequent destination IP addresses t
 ![OpenSearch Dashboard Destination IP Address Map](../static/uploads/dc5dc03aedae35ecb5e7a0a1f96e2a1a/image-7.png)
 
 This map informs you about alert's destination IP Address location. Each color explains about quantity of alerts sent to that location.
-
 
 # Top 10 Destination IP Address Country Table Reading
 

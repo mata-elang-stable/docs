@@ -1,10 +1,7 @@
 ---
-title: Home
+title: Mata Elang Platform
+sidebar_position: 99
 ---
-
-
-
-# Installation Guide ‐ Mata Elang V.2
 
 ## Overview
 
