@@ -62,4 +62,4 @@ mataelang-report-command-service-1   ghcr.io/mata-elang-stable/report-command-se
 
 :key: You shall expect to see Report Generator Login Page.
 
-![image-20](uploads/5428d2e4896102001a2a50cb71d725ad/image-20.png)
+![image-20](../../static/uploads/5428d2e4896102001a2a50cb71d725ad/image-20.png)

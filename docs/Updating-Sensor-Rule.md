@@ -40,8 +40,8 @@ Snort Oinkcode is required if you want to use registered and lightspeed rules.
 To earn your own oinkcode, you must register to [Snort Sign In](https://snort.org/users/sign_up). Create new account if you don't have one.
 
 After you logged in, go to **Oinkcode** tab on the side bar, and you can see your personal Snort Oinkcode.
-![image](uploads/4bd763a4922aeb4861fd5b0349baace3/image.png){width=1435 height=374}
-![image](uploads/bc2da2026b206e8e32139d06f9f215bb/image.png){width=1432 height=391}
+![image](../static/uploads/4bd763a4922aeb4861fd5b0349baace3/image.png)
+![image](../static/uploads/bc2da2026b206e8e32139d06f9f215bb/image.png)
 
 Insert that Oinkcode into `SNORT_OINKCODE` value if needed.
 
