@@ -12,7 +12,7 @@ Mata Elang is the evolution of the Mata Garuda Internet Monitoring Project for I
 This project is based on the article :
 Saputra, F.A.; Salman, M.; Hasim, J.A.N.; Nadhori, I.U.; Ramli, K. The Next-Generation NIDS Platform: Cloud-Based Snort NIDS Using Containers and Big Data. Big Data Cogn. Comput. 2022, 6, 19. https://doi.org/10.3390/bdcc6010019
 
-![MataElang-v2-Architecture](uploads/895f8b2042c298e66625e99e20c8a409/MataElangv2Architecture.drawio__2_.png)
+![MataElang-v2-Architecture](../static/uploads/895f8b2042c298e66625e99e20c8a409/MataElangv2Architecture.drawio__2_.png)
 
 ## Installation
 

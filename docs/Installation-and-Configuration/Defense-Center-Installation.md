@@ -16,6 +16,7 @@ sudo apt update && sudo apt -y upgrade
 [Docker Official Documentation](https://docs.docker.com/engine/install/).
 
 :warning: **NOTE:** You can check Docker version on your host using this command:
+
 ```bash
 docker -v
 ```
