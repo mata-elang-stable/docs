@@ -1,4 +1,7 @@
-# Updating Sensor Rules
+---
+title: Updating Sensor Rules
+sidebar_position: 8
+---
 
 ## Open Sensor Enviroment
 

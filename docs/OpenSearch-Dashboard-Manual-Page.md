@@ -1,7 +1,9 @@
+---
+title: OpenSearch Dashboard
+sidebar_position: 10
+---
 
 Here is how you monitor the Mata Elang v2 system using OpenSearch Dashboard.
-
-# OpenSearch Dashboard
 
 First, you have to open OpenSearch Dashboard page on your browser. You will have to input your credential.
 ![image](uploads/d143583d02f5f501f135a9c935f97f6e/image.png){width=1434 height=549}
@@ -13,8 +15,6 @@ After that, you need to navigate to sidebar and seek for OpenSearch Dashboard's 
 
 And then, choose which dashboard you want to see.
 ![image](uploads/13a2d159874c13e34c28bade2f2b9b84/image.png){width=1440 height=396}
-
-# OpenSearch Dashboard
 
 ![OpenSearch Dashboard Main View](uploads/93dad5d4e85ecb86c57755b9e8ed5e50/image.png)
 
@@ -75,7 +75,7 @@ This table informs you about total alerts categorized by priority (explained by 
 This table informs you about total alerts categorized by protocol (explained by color lists on left) that represented as Y - Axis per 60 minutes of time interval represented as X - Axis that visualized as dots.
 
 
-# Top 10 Source IP Address List Table Reading
+## Top 10 Source IP Address List Table Reading
 
 ![image-14](uploads/78e827607cf137e7fb8b1eede75be95c/image-14.png)
 
@@ -87,13 +87,13 @@ This table informs you about top 10 most frequent source IP Addresses from which
 
 This map informs you about alert's source IP Address location. Each color explains about quantity of alerts sent from that location.
 
-# Top 10 Source IP Address Country Table Reading
+## Top 10 Source IP Address Country Table Reading
 
 ![image-15](uploads/8df28ca7ef3e504f38ba1e54dd87d2c8/image-15.png)
 
 This table informs you about top 10 country from which source IP Addresses originates from, along with the corresponding count of occurrences.
 
-# Top 10 Destination IP Address List Table Reading
+## Top 10 Destination IP Address List Table Reading
 
 ![image-16](uploads/3e020f2722ecb2a24b7fc7c0fc0fbf5f/image-16.png)
 
@@ -107,7 +107,7 @@ This table informs you about the top 10 most frequent destination IP addresses t
 This map informs you about alert's destination IP Address location. Each color explains about quantity of alerts sent to that location.
 
 
-# Top 10 Destination IP Address Country Table Reading
+## Top 10 Destination IP Address Country Table Reading
 
 ![image-17](uploads/934456822fc4eb71e69117cb2fbf43b6/image-17.png)
 

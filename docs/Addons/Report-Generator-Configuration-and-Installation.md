@@ -1,4 +1,7 @@
-# Report Generator Installation and Configuration
+---
+title: Report Generator
+sidebar_position: 1
+---
 
 ## Prerequisite
 

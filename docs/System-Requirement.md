@@ -1,5 +1,6 @@
 ---
 title: System Requirements
+sidebar_position: 6
 ---
 
 ## Introduction
@@ -51,4 +52,3 @@ Rules:
 | OpenSearch-Dashboard | 2        | 2         | 2                 |
 | OpenSearch-Logstash  | 1        | 1         | 1                 |
 | OpenSearch-Init      | 1        | 1         | 1                 |
-```

@@ -1,0 +1,7 @@
+position: 4
+label: Mata Elang Add-ons
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+link:
+  type: generated-index
+  description: Mata Elang Add-ons are additional features that can be added to the Mata Elang Platform to enhance its functionality. In this section, you will find the installation and configuration guide for each add-on.

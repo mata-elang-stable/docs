@@ -1,7 +1,7 @@
 ---
 title: Report Generator Manual Page
+sidebar_position: 10
 ---
-# Report Generator Manual Page
 
 Here is how you create a report from Mata Elang v2 using Mata Elang Report Generator.
 

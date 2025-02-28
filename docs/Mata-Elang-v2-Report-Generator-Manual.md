@@ -1,4 +1,7 @@
-# Report Generator
+---
+title: Mata Elang v2 Report Generator
+sidebar_position: 5
+---
 
 Here is how you could generate Mata Elang v2 Statistic Report.
 

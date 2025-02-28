@@ -1,14 +1,12 @@
 ---
-title: Sensor Installation and Configuration
+title: Mata Elang Sensor
 ---
-
-# Installation - Sensor
 
 ## Prerequisite
 
 ✅ Ubuntu 24.04 LTS installed and updated with the following command.
 
-```
+```bash
 sudo apt update && sudo apt -y upgrade
 ```
 
@@ -18,7 +16,8 @@ sudo apt update && sudo apt -y upgrade
 [Docker Official Documentation](https://docs.docker.com/engine/install/).
 
 :warning: **NOTE:** You can check Docker version on your host using this command:
-```
+
+```bash
 docker -v
 ```
 

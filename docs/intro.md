@@ -1,8 +1,7 @@
 ---
+title: Introduction
 sidebar_position: 1
 ---
-
-# Introduction
 
 ## Abstract
 
@@ -97,11 +96,10 @@ Go to the [Defense Center Installation and Configuration](#defense-center-instal
 
 This section provides information on how to operate and maintain the Mata Elang Platform. It includes startup and shutdown procedures, user management, sensor management, and troubleshooting.
 
-- [Startup/Shutdown Procedures](#operation-and-maintenance)
-- User Management
-  - [OpenSearch User Management](#operation-and-maintenance)
-- Sensor Management
-  - [Update Sensor Rule](#operation-and-maintenance)
-  - [Capture Sensor Log and Change Log Limit Size](#operation-and-maintenance)
-  - [Security Consideration](#operation-and-maintenance)
-- [Troubleshooting](#operation-and-maintenance)
+- [Abstract](#abstract)
+- [Project Overview](#project-overview)
+- [Mata Elang Platform Architecture](#mata-elang-platform-architecture)
+- [Installation](#installation)
+  - [Sensor Installation and Configuration](#sensor-installation-and-configuration)
+  - [Defense Center Installation and Configuration](#defense-center-installation-and-configuration)
+- [Operation and Maintenance](#operation-and-maintenance)
