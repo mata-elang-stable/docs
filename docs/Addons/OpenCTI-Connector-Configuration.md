@@ -3,17 +3,17 @@ title: OpenCTI Connector
 sidebar_position: 2
 ---
 
-You can install OpenCTI to integrate with Mata Elang by following this official documentation from [OpenCTI Integrations Official Documentation](https://docs.opencti.io/latest/deployment/installation/)
+You can install OpenCTI to integrate with Mata Elang by following this official documentation from [OpenCTI Integrations Official Documentation](https://github.com/mata-elang-stable/opencti-connector)
 
 ## Prerequisite
 
 :white_check_mark: Defense Center installed.
 
-[Defense Center Installation](Installation-and-Configuration/{Defense-Center-Installation}).
+[Defense Center Installation](../Installation-and-Configuration/Defense-Center-Installation.md).
 
 :white_check_mark: OpenCTI installed.
 
-[OpenCTI Installation](OpenCTI-Installation).
+[OpenCTI Installation](https://docs.opencti.io/latest/deployment/installation/).
 
 ## OpenCTI Connector Configuration
 

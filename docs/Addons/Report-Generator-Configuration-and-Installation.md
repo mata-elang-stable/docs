@@ -6,7 +6,7 @@ sidebar_position: 1
 ## Prerequisite
 
 :white_check_mark: Defense Center installed.
-[Defense Center Installation](Installation-and-Configuration/{Defense-Center-Installation}).
+[Defense Center Installation](../Installation-and-Configuration/Defense-Center-Installation.md).
 
 ## Configurating and Installing Report Generator
 
