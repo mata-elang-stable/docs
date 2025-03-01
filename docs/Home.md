@@ -28,7 +28,7 @@ This section discuss about how to install Mata Elang Platform.
 
 - [Startup/Shutdown Procedures](Startup-and-Shutdown-Procedures.md)
 - User Management
-  - [OpenSearch User Management](User-Management-(OpenSearch).md)
+  - [OpenSearch User Management](User-Management-OpenSearch.md)
 - Sensor Management
   - [Update Sensor Rule](Updating-Sensor-Rule.md)
 - [Troubleshooting](Troubleshooting.md)
@@ -43,4 +43,4 @@ This section discuss about how to install Mata Elang Platform.
 
 ## User Manual
 - [OpenDashboard Usage Manual](OpenSearch-Dashboard-Manual-Page.md)
-- [Report Generator Usage Manual](User-Management-(Report-Generator).md)
+- [Report Generator Usage Manual](User-Management-Report-Generator.md)
