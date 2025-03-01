@@ -15,6 +15,7 @@ You can install OpenCTI to integrate with Mata Elang by following this official 
 
 [OpenCTI Installation](https://docs.opencti.io/latest/deployment/installation/).
 
+
 ## OpenCTI Connector Configuration
 
 ▶️ Find **compose.opencti-connector.yml** inside defense center folder.
@@ -25,8 +26,6 @@ la
 ```
 
 ▶️ See where the default directory of **parser's .env** and **aggregator's .env.** It should be set to **conf** folder.
-
-
 
 ▶️ Open **conf** folder and find for OpenCTI **parser's .env** and OpenCTI **aggregator's .env.**
 
@@ -40,7 +39,8 @@ la opencti*
 ```bash
 opencti-connector-aggr.env  opencti-connector-parser.env
 ```
-##### opencti-connector-aggr
+
+### opencti-connector-aggr
 
 :key: default value for **opencti-connector-aggr.env**
 
@@ -52,8 +52,7 @@ KAFKA_TOPIC=sensor_events
 
 You may change each variable's value to connect to defence center.
 
-
-##### opencti-connector-parser
+### opencti-connector-parser
 
 :key: default value for **opencti-connector-parser.env**
 
@@ -69,20 +68,22 @@ You may change each variable's value to connect to defense center.
 
 > :key:  **NOTE:** To get your API key, go to your Profile > API access. Refer to the [OpenCTI Integrations Authentication documentation](https://docs.opencti.io/latest/deployment/integrations/#authentication)
 
-
 ▶️ Go back to **defense center** folder and pull **opencti connector** image by typing this command:
 
 ```bash
 docker compose -f compose.opencti-connector.yml pull
 ```
+
 Wait until pull process finish.
 
 ▶️ Start **OpenCTI Connector**  service with this command:
+
 ```bash
 docker compose -f compose.opencti-connector.yml up -d
 ```
 
 ▶️ Check the container whether its already running or not.
+
 ```bash
 docker compose -f compose.opencti-connector.yml ps -a
 ```

@@ -11,12 +11,14 @@ sidebar_position: 1
 ## Configurating and Installing Report Generator
 
 ▶️ All files about Report Generator are inside **defense Center** folder. Access through it and open **.env**.
+
 ```bash
 cd docs/defense_center
 la .env*
 ```
 
 :key: .env default variable values:
+
 ```bash
 POSTGRES_DB=mataelang
 POSTGRES_USER=mataelang
@@ -27,9 +29,10 @@ OPENSEARCH_INITIAL_ADMIN_PASSWORD=mataelang@123
 
 You may change its value to suit your database configuration.
 
-
 ### Installing Report Generator Service
+
 ▶️ After you done configurating **.env**, pull the report generator image.
+
 ```bash
 cd docs/defense_center
 docker compose -f compose.reporting.yml pull
@@ -42,6 +45,7 @@ Wait until pull process is done.
 ```bash
 docker compose -f compose.reporting.yml up -d
 ```
+
 ▶️ Check the container whether it's already running or not.
 
 ```bash
@@ -59,6 +63,7 @@ mataelang-redis-1                    valkey/valkey:8                            
 mataelang-report-api-1               ghcr.io/mata-elang-stable/report-api-service:latest                  "/var/www/html/start…"   report-api                     5 days ago   Up 5 days                       9000/tcp
 mataelang-report-command-service-1   ghcr.io/mata-elang-stable/report-command-service:latest              "/go/bin/app"            report-command-service         5 days ago   Up 5 days
 ```
+
 ## Checking Your Report Generator Service
 
 ▶️ Open your browser and insert **https://[YOUR_IP_ADDRESS]:8085**
