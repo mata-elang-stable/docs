@@ -47,7 +47,7 @@ cp /path/to/GeoLite2-ASN.mmdb files/GeoLite2-ASN.mmdb
 
 > **Note:**
 > The filename for the GeoLite2 City and ASN databases should be `GeoLite2-City.mmdb` and `GeoLite2-ASN.mmdb` respectively.
-> Otherwise, you need to update the [compose.reporting.yml in line 42-43](compose.reporting.yml#L42-L43).
+> Otherwise, you need to update the compose.reporting.yml volume .
 
 
 ▶️ Find **defense_center** folder, and check for its contained files.

@@ -3,7 +3,7 @@ title: OpenCTI Connector
 sidebar_position: 2
 ---
 
-You can install OpenCTI to integrate with Mata Elang by following this official documentation from [OpenCTI Integrations Official Documentation](https://docs.opencti.io/latest/deployment/installation/)
+You can install OpenCTI to integrate with Mata Elang by following this official documentation from [OpenCTI Integrations Official Documentation](https://github.com/mata-elang-stable/opencti-connector)
 
 ## Prerequisite
 
@@ -13,7 +13,8 @@ You can install OpenCTI to integrate with Mata Elang by following this official 
 
 :white_check_mark: OpenCTI installed.
 
-You can install OpenCTI to integrate with Mata Elang by following this official documentation from [OpenCTI Integrations Official Documentation](https://docs.opencti.io/latest/deployment/installation/)
+[OpenCTI Installation](https://docs.opencti.io/latest/deployment/installation/).
+
 
 ## OpenCTI Connector Configuration
 

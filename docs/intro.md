@@ -84,13 +84,13 @@ If you are interested in deploying the Mata Elang Platform locally, you can foll
 
 Sensor is a network security monitoring platform that uses Snort as the network intrusion detection system (NIDS). The sensor is deployed in the network to monitor the traffic and detect any malicious activities. The sensor sends the logs to the defense center for further analysis and visualization.
 
-Go to the [Sensor Installation and Configuration](#sensor-installation-and-configuration) page to set up the sensor.
+Go to the [Sensor Installation and Configuration](./Installation-and-Configuration/Sensor-Installation.md) page to set up the sensor.
 
 ### Defense Center Installation and Configuration
 
 Defense Center is a big data platform that uses Apache Kafka as the distributed messaging system and big data technology orchestrated on lambda architecture. The defense center receives the logs from the sensors, processes the logs, and visualizes the attack statistics.
 
-Go to the [Defense Center Installation and Configuration](#defense-center-installation-and-configuration) page to set up the defense center.
+Go to the [Defense Center Installation and Configuration](./Installation-and-Configuration/Defense-Center-Installation.md) page to set up the defense center.
 
 ## Operation and Maintenance
 

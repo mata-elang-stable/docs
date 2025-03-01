@@ -20,27 +20,27 @@ This section discuss about how to install Mata Elang Platform.
 
 ## Installation and Configuration
 
-- [System Requirement](System-Requirement)
-- [Defense Center Installation](Installation-and-Configuration/{Defense-Center-Installation})
-- [Sensor Installation](Installation-and-Configuration/{Sensor-Installation})
+- [System Requirement](System-Requirement.md)
+- [Defense Center Installation](Installation-and-Configuration/Defense-Center-Installation.md)
+- [Sensor Installation](Installation-and-Configuration/Sensor-Installation.md)
 
 ## Operation and Maintenance
 
-- [Startup/Shutdown Procedures](Startup-and-Shutdown-Procedures)
+- [Startup/Shutdown Procedures](Startup-and-Shutdown-Procedures.md)
 - User Management
-  - [OpenSearch User Management](User-Management-(OpenSearch))
+  - [OpenSearch User Management](User-Management-OpenSearch.md)
 - Sensor Management
-  - [Update Sensor Rule](Updating-Sensor-Rule)
-- [Troubleshooting](Troubleshooting)
+  - [Update Sensor Rule](Updating-Sensor-Rule.md)
+- [Troubleshooting](Troubleshooting.md)
 
 ## Add-ons
 
 - Integration with OpenCTI
-  - [OpenCTI Installation](OpenCTI-Installation)
-  - [OpenCTI Connector Configuration](OpenCTI-Connector-Configuration)
-- [Report Generator](Report-Generator-Configuration-and-Installation)
+  - [OpenCTI Installation](https://docs.opencti.io/latest/deployment/installation/)
+  - [OpenCTI Connector Configuration](Addons/OpenCTI-Connector-Configuration.md)
+- [Report Generator](Addons/Report-Generator-Configuration-and-Installation.md)
 
 
 ## User Manual
-- [OpenDashboard Usage Manual](OpenSearch-Dashboard-Manual-Page)
-- [Report Generator Usage Manual](User-Management-(Report-Generator))
+- [OpenDashboard Usage Manual](OpenSearch-Dashboard-Manual-Page.md)
+- [Report Generator Usage Manual](User-Management-Report-Generator.md)
