@@ -1,0 +1,7 @@
+position: 1
+label: Mata Elang OpenCTI Connector
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+link:
+  type: generated-index
+  description: Mata Elang OpenCTI Connector is an add-on that allows you to connect the Mata Elang Platform with the OpenCTI Platform. In this section, you will find the installation and configuration guide for the OpenCTI Connector add-on.

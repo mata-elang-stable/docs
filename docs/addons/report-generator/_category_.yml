@@ -1,0 +1,7 @@
+position: 1
+label: Mata Elang Report Generator
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+link:
+  type: generated-index
+  description: Mata Elang Report Generator is an add-on that allows you to generate reports from the Mata Elang Platform. In this section, you will find the installation and configuration guide for the Report Generator add-on.
