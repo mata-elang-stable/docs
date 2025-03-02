@@ -1,5 +1,5 @@
 ---
-title: OpenCTI Connector
+title: Installation and Configuration
 sidebar_position: 2
 ---
 

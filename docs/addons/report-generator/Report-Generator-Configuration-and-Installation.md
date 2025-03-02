@@ -1,5 +1,5 @@
 ---
-title: Report Generator
+title: Installation and Configuration
 sidebar_position: 1
 ---
 
