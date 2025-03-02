@@ -1,5 +1,5 @@
 ---
-title: Mata Elang v2 Report Generator
+title: Usage
 sidebar_position: 5
 ---
 

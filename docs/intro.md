@@ -27,47 +27,6 @@ This project is based on the article: [The Next-Generation NIDS Platform: Cloud-
 }
 ```
 
-## Mata Elang Platform Architecture
-
-```mermaid
----
-config:
-  layout: elk
-  elk:
-    mergeEdges: false
-    nodePlacementStrategy: SIMPLE 
----
-graph LR
-    network_isp(Internet)
-    network_router(Router)
-    network_tapper(Tapper)
-
-    sensor1_snort(Snort v3)
-    sensor1_parser(Sensor Parser)
-
-    dc_sensor_api(Sensor API Server)
-    dc_kafka(Apache Kafka)
-    dc_opensearch(OpenSearch)
-    dc_dashboard(OpenSearch Dashboard)
-
-    subgraph Site A
-        network_isp-->network_tapper
-        network_tapper-->network_router
-        network_tapper-->sensor1_snort
-        
-        subgraph me_sensor1[Mata Elang Sensor]
-            sensor1_snort-->sensor1_parser
-        end
-    end
-
-    subgraph me_dc[Mata Elang Defense Center]
-        sensor1_parser-->dc_sensor_api
-        dc_sensor_api-->dc_kafka
-        dc_kafka-->dc_opensearch
-        dc_opensearch-->dc_dashboard
-    end
-```
-
 ## Installation
 
 Here, as an example, we will show you how to set up the Mata Elang Platform.
@@ -98,7 +57,6 @@ This section provides information on how to operate and maintain the Mata Elang 
 
 - [Abstract](#abstract)
 - [Project Overview](#project-overview)
-- [Mata Elang Platform Architecture](#mata-elang-platform-architecture)
 - [Installation](#installation)
   - [Sensor Installation and Configuration](#sensor-installation-and-configuration)
   - [Defense Center Installation and Configuration](#defense-center-installation-and-configuration)
