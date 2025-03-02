@@ -40,7 +40,7 @@ This section discuss about how to install Mata Elang Platform.
   - [OpenCTI Connector Configuration](/docs/addons/opencti-connector/OpenCTI-Connector-Configuration.md)
 - [Report Generator](/docs/addons/report-generator/Report-Generator-Configuration-and-Installation.md)
 
-
 ## User Manual
+
 - [OpenDashboard Usage Manual](OpenSearch-Dashboard-Manual-Page.md)
-- [Report Generator Usage Manual](User-Management-Report-Generator.md)
+- [Report Generator Usage Manual](addons/report-generator/User-Management-Report-Generator.md)
