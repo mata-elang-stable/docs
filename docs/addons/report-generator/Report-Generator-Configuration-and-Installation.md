@@ -6,7 +6,7 @@ sidebar_position: 1
 ## Prerequisite
 
 :white_check_mark: Defense Center installed.
-[Defense Center Installation](../Installation-and-Configuration/Defense-Center-Installation.md).
+[Defense Center Installation](../../Installation-and-Configuration/Defense-Center-Installation.md).
 
 ## Configurating and Installing Report Generator
 
@@ -70,4 +70,4 @@ mataelang-report-command-service-1   ghcr.io/mata-elang-stable/report-command-se
 
 :key: You shall expect to see Report Generator Login Page.
 
-![image-20](../../static/uploads/5428d2e4896102001a2a50cb71d725ad/image-20.png)
+![image-20](../../../static/uploads/5428d2e4896102001a2a50cb71d725ad/image-20.png)
