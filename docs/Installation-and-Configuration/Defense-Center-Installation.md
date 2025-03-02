@@ -129,3 +129,6 @@ mataelang-schema-registry-1          confluentinc/cp-schema-registry:7.8.0      
 mataelang-sensor-api-1               ghcr.io/mata-elang-stable/sensor-snort-service:latest                "/go/bin/app server …"   sensor-api               11 seconds ago   Up 10 seconds                 0.0.0.0:50051->50051/tcp, :::50051->50051/tcp
 mataelang-sensor-event-stream-op-1   ghcr.io/mata-elang-stable/event-stream-aggr:latest                   "/go/bin/app -v"         sensor-event-stream-op   11 seconds ago   Up 10 seconds
 ```
+
+🔑 You can access dashboard on http://localhost:5601
+![image](../../static/uploads/d143583d02f5f501f135a9c935f97f6e/image.png)

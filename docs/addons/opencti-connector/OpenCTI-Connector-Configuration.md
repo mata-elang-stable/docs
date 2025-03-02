@@ -9,7 +9,7 @@ You can install OpenCTI to integrate with Mata Elang by following this official 
 
 :white_check_mark: Defense Center installed.
 
-[Defense Center Installation](../Installation-and-Configuration/Defense-Center-Installation.md).
+[Defense Center Installation](../../Installation-and-Configuration/Defense-Center-Installation.md).
 
 :white_check_mark: OpenCTI installed.
 

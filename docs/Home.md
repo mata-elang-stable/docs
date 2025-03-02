@@ -37,8 +37,8 @@ This section discuss about how to install Mata Elang Platform.
 
 - Integration with OpenCTI
   - [OpenCTI Installation](https://docs.opencti.io/latest/deployment/installation/)
-  - [OpenCTI Connector Configuration](Addons/OpenCTI-Connector-Configuration.md)
-- [Report Generator](Addons/Report-Generator-Configuration-and-Installation.md)
+  - [OpenCTI Connector Configuration](/docs/addons/opencti-connector/OpenCTI-Connector-Configuration.md)
+- [Report Generator](/docs/addons/report-generator/Report-Generator-Configuration-and-Installation.md)
 
 
 ## User Manual

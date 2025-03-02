@@ -496,4 +496,5 @@ Using the official Docker repository is recommended to get the latest version an
 
 ## Accessing the Dashboard
 
-After successfully installing the Mata Elang Defense Center, you can access the dashboard by visiting [http://localhost:5601](http://localhost:5601) in your web browser.
+After successfully installing the Mata Elang Defense Center, you can access the dashboard by visiting [http://localhost:5601](http://localhost:5601) in your web browser with username: admin and password: SecurePassword@123.
+![image](../static/uploads/d143583d02f5f501f135a9c935f97f6e/image.png)
