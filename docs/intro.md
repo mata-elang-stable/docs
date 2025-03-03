@@ -23,7 +23,7 @@ This project is based on the article: Saputra, F.A.; Salman, M.; Hasim, J.A.N.; 
 
 ## Project Architecture
 
-![MataElang-v2-Architecture](/img/MataElangv2Architecture.drawio__2_.png)
+![MataElang-V2-Architecture](../static/uploads/895f8b2042c298e66625e99e20c8a409/MataElangv2Architecture.drawio__2_.png)
 
 ## Component Functionality
 
