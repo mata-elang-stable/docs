@@ -2,18 +2,50 @@
 title: Introduction
 sidebar_position: 1
 ---
+![GitHub stars](https://img.shields.io/github/stars/mata-elang-stable/MataElang-Platform?style=social)
+![GitHub forks](https://img.shields.io/github/forks/mata-elang-stable/MataElang-Platform?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/mata-elang-stable/MataElang-Platform?style=social)
 
-## Abstract
+Mata Elang is the evolution of the Mata Garuda Internet Monitoring Project for Indonesia. This project was initialized as a private repository in 2018 by Cyber Security Research Group (CSRG) - Politeknik Elektronika Negeri Surabaya (PENS). Currently, Mata Elang is a collaboration research between PENS, Universitas Indonesia (UI), and Badan Riset dan Inovasi Nasional (BRIN)with supports from Japan International Cooperation Agency (JICA).
 
-Snort is a well-known, signature-based network intrusion detection system (NIDS). The Snort sensor must be placed within the same physical network, and the defense centers in the typical NIDS architecture offer limited network coverage, especially for remote networks with a restricted bandwidth and network policy. Additionally, the growing number of sensor instances, followed by a quick increase in log data volume, has caused the present system to face big data challenges. This research paper proposes a novel design for a cloud-based Snort NIDS using containers and implementing big data in the defense center to overcome these problems. Our design consists of Docker as the sensor's platform, Apache Kafka as the distributed messaging system, and big data technology orchestrated on lambda architecture. We conducted experiments to measure sensor deployment, optimum message delivery from the sensors to the defense center, aggregation speed, and efficiency in the data-processing performance of the defense center. We successfully developed a cloud-based Snort NIDS and found the optimum method for message delivery from the sensor to the defense center. We also succeeded in developing the dashboard and attack maps to display the attack statistics and visualize the attacks. Our first design is reported to implement the big data architecture, namely, lambda architecture, as the defense center and utilize rapid deployment of Snort NIDS using Docker technology as the network security monitoring platform.
+## Key Features
 
-## Project Overview
+- 🚀 **Effortless Setup**: Mata Elang provides a seamless deployment experience using Docker Compose, making it easy to install and manage across different environments. Whether you're deploying on a single machine or a cloud-based infrastructure, the setup process is streamlined to reduce complexity and ensure a quick start.
+- 🔍 **Advanced Intrusion Detection with Snort**: At its core, Mata Elang integrates Snort, a leading Network Intrusion Detection System (NIDS), to monitor and analyze network traffic for potential threats. It leverages real-time packet inspection and rule-based detection to identify malicious activities and security breaches.
+- 📊 **Big Data Analytics for Threat Intelligence**: Unlike traditional NIDS solutions, Mata Elang is built on a Big Data platform, allowing it to process and store massive amounts of network traffic data efficiently. This ensures better detection accuracy, supports long-term trend analysis, and enables real-time correlation of security events.
+- 🏗 **Scalable & Distributed Architecture**: Mata Elang is designed for scalability, enabling security teams to deploy sensors across multiple network nodes. Its distributed architecture ensures that even high-traffic networks can be monitored efficiently without performance bottlenecks.
+- 🛡 **Real-Time Threat Detection & Response**: By leveraging machine learning and behavioral analysis, Mata Elang can detect anomalies in network traffic and provide real-time alerts. The system is capable of adapting to new and evolving cyber threats, offering a proactive approach to network security.
 
-![MataElang-v2-Architecture](/img/MataElangv2Architecture.png)
+## Project Architecture
 
-Mata Elang is the evolution of the Mata Garuda Internet Monitoring Project for Indonesia. This project was initialized as a private repository in 2018 by LabJarkomC307 - Politeknik Elektronika Negeri Surabaya. Currently, Mata Elang is a collaboration research between PENS, Universitas Indonesia, and BRIN (Badan Riset dan Inovasi Nasional). Mata Elang is supported by JICA.
+![MataElang-V2-Architecture](../static/uploads/895f8b2042c298e66625e99e20c8a409/MataElangv2Architecture.drawio__2_.png)
 
-This project is based on the article: [The Next-Generation NIDS Platform: Cloud-Based Snort NIDS Using Containers and Big Data](https://www.mdpi.com/2504-2289/6/1/19)
+## Component Functionality
+
+### Network Traffic Monitoring
+
+- **Network Tap**: This component passively captures incoming and outgoing network traffic from the Protected LAN (internal network) and sends it to the Snort Intrusion Detection Sensor for analysis.
+- The goal is to monitor all data packets without interfering with normal network operations.
+
+### Intrusion Detection & Data Parsing
+
+- **Snort (Intrusion Detection Sensor)**: This is the core detection engine responsible for analyzing network packets and identifying potential security threats based on predefined rules.
+- If Snort detects a suspicious packet, it forwards the information to the Parser.
+- **Parser**: Extracts relevant metadata from Snort alerts and converts it into a structured format for further processing.
+
+### Data Transmission & Processing
+
+- The parsed data is sent to the Defense Center, which is responsible for storing, processing, and analyzing threats using scalable big data technologies.
+- **Sensor API**: Acts as an intermediary that receives data from the sensor (Snort) and ensures secure data transmission to the backend processing components.
+
+### Event Streaming & Threat Intelligence
+
+- **Kafka (Event Streaming Platform):** Kafka acts as a message broker, ensuring that Snort-generated alerts are processed in real time.
+- It allows high-throughput data streaming, making the system scalable and responsive to large volumes of traffic data.
+
+## Reference
+
+This project is based on the research that you could read the article [here](https://www.mdpi.com/2504-2289/6/1/19)
 
 ```bibtex
 @article{saputra2022next,
@@ -26,38 +58,3 @@ This project is based on the article: [The Next-Generation NIDS Platform: Cloud-
   doi={10.3390/bdcc6010019}
 }
 ```
-
-## Installation
-
-Here, as an example, we will show you how to set up the Mata Elang Platform.
-
-If you are interested in deploying the Mata Elang Platform locally, you can follow the quick start guide below.
-
-[Quick Start Guide](/docs/quick-start.md)
-
-<!-- #### All Servers
-
-1. [Time Zone and NTP](/mata-elang-stable/mataelang-platform/wiki/time-zone-and-ntp) -->
-
-### Sensor Installation and Configuration
-
-Sensor is a network security monitoring platform that uses Snort as the network intrusion detection system (NIDS). The sensor is deployed in the network to monitor the traffic and detect any malicious activities. The sensor sends the logs to the defense center for further analysis and visualization.
-
-Go to the [Sensor Installation and Configuration](./Installation-and-Configuration/Sensor-Installation.md) page to set up the sensor.
-
-### Defense Center Installation and Configuration
-
-Defense Center is a big data platform that uses Apache Kafka as the distributed messaging system and big data technology orchestrated on lambda architecture. The defense center receives the logs from the sensors, processes the logs, and visualizes the attack statistics.
-
-Go to the [Defense Center Installation and Configuration](./Installation-and-Configuration/Defense-Center-Installation.md) page to set up the defense center.
-
-## Operation and Maintenance
-
-This section provides information on how to operate and maintain the Mata Elang Platform. It includes startup and shutdown procedures, user management, sensor management, and troubleshooting.
-
-- [Abstract](#abstract)
-- [Project Overview](#project-overview)
-- [Installation](#installation)
-  - [Sensor Installation and Configuration](#sensor-installation-and-configuration)
-  - [Defense Center Installation and Configuration](#defense-center-installation-and-configuration)
-- [Operation and Maintenance](#operation-and-maintenance)
