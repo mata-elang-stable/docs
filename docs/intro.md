@@ -5,8 +5,8 @@ sidebar_position: 1
 ![GitHub stars](https://img.shields.io/github/stars/mata-elang-stable/MataElang-Platform?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/mata-elang-stable/MataElang-Platform?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/mata-elang-stable/MataElang-Platform?style=social)
-![GitHub repo size](https://img.shields.io/github/repo-size/mata-elang-stable/MataElang-Platform)
-[![Discord](https://img.shields.io/badge/Discord-Mata_Elang-blue?logo=discord&logoColor=white)](https://discord.gg/gRVMNZMP)
+<!-- ![GitHub repo size](https://img.shields.io/github/repo-size/mata-elang-stable/MataElang-Platform)
+[![Discord](https://img.shields.io/badge/Discord-Mata_Elang-blue?logo=discord&logoColor=white)](https://discord.gg/gRVMNZMP) -->
 
 Mata Elang is the evolution of the Mata Garuda Internet Monitoring Project for Indonesia. This project was initialized as a private repository in 2018 by Cyber Security Research Group (CSRG) - Politeknik Elektronika Negeri Surabaya (PENS). Currently, Mata Elang is a collaboration research between PENS, Universitas Indonesia (UI), and Badan Riset dan Inovasi Nasional (BRIN)with supports from Japan International Cooperation Agency (JICA).
 
