@@ -34,7 +34,7 @@ Here, as an example, we will show you how to set up the Mata Elang Platform.
 
 If you are interested in deploying the Mata Elang Platform locally, you can follow the quick start guide below.
 
-[Quick Start Guide](/docs/quick-start.md)
+[Quick Start Guide](quick-start.md)
 
 <!-- #### All Servers
 
