@@ -8,18 +8,18 @@ import TabItem from '@theme/TabItem';
 
 This guide will help you to get started with Mata Elang. Mata Elang is a network security platform that provides network intrusion detection system (NIDS) capabilities. It is designed to help you monitor and protect your network from malicious activities.
 
-See the [Introduction](/docs/intro.md) for more information.
+See the [Introduction](intro.md) for more information.
 
 ## Defense Center - Hardware Requirements
 
 In the latest version of Mata Elang, there are huge improvements in terms of performance and scalability. The hardware requirements for the new version change significantly. The following table shows the minimum and recommended hardware requirements for the new version of Mata Elang.
 
 | Component | Minimum | Recommended |
-| --- | --- | --- |
-| CPU | 4 cores | 8 cores |
-| RAM | 8 GB | 16 GB |
-| Storage | 100 GB | 200 GB |
-| Network | 1 Gbps | 1 Gbps |
+| --------- | ------- | ----------- |
+| CPU       | 4 cores | 8 cores     |
+| RAM       | 8 GB    | 16 GB       |
+| Storage   | 100 GB  | 200 GB      |
+| Network   | 1 Gbps  | 1 Gbps      |
 
 ### Sensor - Hardware Requirements
 
@@ -33,11 +33,11 @@ The monitoring interface must be in [**promiscuous mode**](https://www.blumira.c
 :::
 
 | Component | Minimum | Recommended |
-| --- | --- | --- |
-| CPU | 2 cores | 4 cores |
-| RAM | 2 GB | 4 GB |
-| Storage | 50 GB | 120 GB |
-| Network | 1 Gbps | 1 Gbps |
+| --------- | ------- | ----------- |
+| CPU       | 2 cores | 4 cores     |
+| RAM       | 2 GB    | 4 GB        |
+| Storage   | 50 GB   | 120 GB      |
+| Network   | 1 Gbps  | 1 Gbps      |
 
 ## Software Requirements
 
@@ -55,12 +55,12 @@ Using the official Docker repository is recommended to get the latest version an
 ### Installing Mata Elang Defense Center
 
 <Tabs
-  className="unique-tabs"
-  defaultValue="manual"
-  groupId="installation-method"
-  >
-  <TabItem value="docker-compose" label="Docker Compose">
-    
+className="unique-tabs"
+defaultValue="manual"
+groupId="installation-method"
+
+>   <TabItem value="docker-compose" label="Docker Compose">
+
 1. Create a `docker-compose.yml` file with the following content. You don't need to change anything in the file.
 
    ```yaml title="compose.yml" showLineNumbers
@@ -354,6 +354,12 @@ Using the official Docker repository is recommended to get the latest version an
    cp .env.example .env
    ```
 
+   Edit the `.env` file to set the `OPENSEARCH_INITIAL_ADMIN_PASSWORD` variable.
+
+   ```bash title=".env"
+   OPENSEARCH_INITIAL_ADMIN_PASSWORD=SecurePassword@123
+   ```
+
 3. **Pull Images**: Pull the required Docker images.
 
    ```bash
@@ -374,11 +380,11 @@ Using the official Docker repository is recommended to get the latest version an
 ### Installing Mata Elang Sensor
 
 <Tabs
-  className="unique-tabs"
-  defaultValue="manual"
-  groupId="installation-method"
-  >
-  <TabItem value="docker-compose" label="Docker Compose">
+className="unique-tabs"
+defaultValue="manual"
+groupId="installation-method"
+
+>   <TabItem value="docker-compose" label="Docker Compose">
 
 1. Create a `compose.yml` file with the following content
 
@@ -470,10 +476,11 @@ Using the official Docker repository is recommended to get the latest version an
    ```
 
    Configurations required to be updated:
-    - `NETWORK_INTERFACE`: The network interface to capture packets. (e.g., `eth0`)
-    - `MES_CLIENT_SERVER`: The Mata Elang Defense Center server address. (e.g., `172.17.0.1`). Leave it as it is if you are deploying the Mata Elang Defense Center on the same machine.
-    - `MES_CLIENT_PORT`: The Mata Elang Defense Center server port. (e.g., `50051`). Leave it as it is if you are deploying the Mata Elang Defense Center on the same machine.
-    - `MES_CLIENT_SENSOR_ID`: The Mata Elang Sensor ID. (e.g., `snort-1`)
+
+   - `NETWORK_INTERFACE`: The network interface to capture packets. (e.g., `eth0`)
+   - `MES_CLIENT_SERVER`: The Mata Elang Defense Center server address. (e.g., `172.17.0.1`). Leave it as it is if you are deploying the Mata Elang Defense Center on the same machine.
+   - `MES_CLIENT_PORT`: The Mata Elang Defense Center server port. (e.g., `50051`). Leave it as it is if you are deploying the Mata Elang Defense Center on the same machine.
+   - `MES_CLIENT_SENSOR_ID`: The Mata Elang Sensor ID. (e.g., `snort-1`)
 
    :::note
    If you are running the sensor and the defense center on the same machine, you can use `172.17.0.1` in Linux or `host.docker.internal` in Windows/Mac.
@@ -496,5 +503,5 @@ Using the official Docker repository is recommended to get the latest version an
 
 ## Accessing the Dashboard
 
-After successfully installing the Mata Elang Defense Center, you can access the dashboard by visiting [http://localhost:5601](http://localhost:5601) in your web browser with username: admin and password: SecurePassword@123.
-![image](../static/uploads/d143583d02f5f501f135a9c935f97f6e/image.png)
+After successfully installing the Mata Elang Defense Center, you can access the dashboard by visiting [http://localhost:5601](http://localhost:5601) in your web browser with username `admin` and password `SecurePassword@123`.
+![image](uploads/d143583d02f5f501f135a9c935f97f6e/image.png)

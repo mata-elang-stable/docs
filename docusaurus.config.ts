@@ -68,17 +68,22 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           // editUrl:
           //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          lastVersion: "1.1.0",
-          includeCurrentVersion: true,
+          lastVersion: "2.0.0",
+          includeCurrentVersion: false,
           versions: {
-            current: {
-              label: "2.0.0-rc",
-              path: "2.0.0-rc",
-              banner: 'unreleased',
+            // current: {
+            //   label: "canary",
+            //   path: "canary",
+            //   banner: 'unreleased',
+            //   badge: true,
+            // },
+            "2.0.0": {
+              label: "2.0.0 (latest)",
+              path: "2.0.0",
               badge: true,
             },
             "1.1.0": {
-              label: "1.1.0 (latest)",
+              label: "1.1.0",
               path: "1.1.0",
               badge: true,
             },
