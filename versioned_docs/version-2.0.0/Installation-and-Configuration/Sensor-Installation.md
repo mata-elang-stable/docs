@@ -37,7 +37,7 @@ git clone https://github.com/mata-elang-stable/example-docker-deployment.git
 ▶️ Find **sensor_snort** folder, and check for its contained files.
 
 ```bash
-cd docs/sensor_snort/ && tree --dirsfirst -L 1
+cd example-docker-deployment/sensor_snort/ && tree --dirsfirst -L 1
 ```
 
 🔑 You shall expect this result

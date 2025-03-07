@@ -32,27 +32,8 @@ docker -v
 git clone https://github.com/mata-elang-stable/example-docker-deployment.git
 ```
 
-### Download GeoLite2 database
-
-- [GeoLite2 City and ASN Database](https://dev.maxmind.com/geoip/geoip2/geolite2/) in mmdb format.
-
-#### Preparation
-
-**Place GeoLite2 Databases**: Place the GeoLite2 City and ASN databases in the `geoip` directory.
-
 ```bash
-cp /path/to/GeoLite2-City.mmdb files/GeoLite2-City.mmdb
-cp /path/to/GeoLite2-ASN.mmdb files/GeoLite2-ASN.mmdb
-```
-
-> **Note:**
-> The filename for the GeoLite2 City and ASN databases should be `GeoLite2-City.mmdb` and `GeoLite2-ASN.mmdb` respectively.
-> Otherwise, you need to update the compose.reporting.yml volume .
-
-▶️ Find **defense_center** folder, and check for its contained files.
-
-```bash
-cd docs/defense_center/ && tree --dirsfirst -L 1
+cd example-docker-deployment/defense_center/ && tree --dirsfirst -L 1
 ```
 
 🔑 Using `tree` command above, you should see this directory structure.
