@@ -21,50 +21,31 @@ You can install OpenCTI to integrate with Mata Elang by following this official 
 ▶️ Find **compose.opencti-connector.yml** inside defense center folder.
 
 ```bash
-cd docs/defense_center
+cd example-docker-deployment/defense_center
 la
 ```
 
-▶️ See where the default directory of **parser's .env** and **aggregator's .env.** It should be set to **conf** folder.
-
-▶️ Open **conf** folder and find for OpenCTI **parser's .env** and OpenCTI **aggregator's .env.**
-
-```bash
-cd conf
-la opencti*
-```
+▶️ See where the directory of **defense_center** It should be set to **.env.example**.
 
 :key: You should see this result
 
 ```bash
-opencti-connector-aggr.env  opencti-connector-parser.env
+.env.example
 ```
 
-### opencti-connector-aggr
+### opencti-connector
 
-:key: default value for **opencti-connector-aggr.env**
+:key: default value for **.env.example**
 
 ```bash
-KAFKA_URL=broker:29092
-KAFKA_CONSUMER_GROUP_ID=opencti-aggr
-KAFKA_TOPIC=sensor_events
+# OPENCTI_URL is the URL of the OpenCTI instance.
+OPENCTI_URL=http://opencti:8080
+
+# OPENCTI_API is the API key used to authenticate the Defense Center with OpenCTI.
+OPENCTI_API_KEY=
 ```
 
 You may change each variable's value to connect to defence center.
-
-### opencti-connector-parser
-
-:key: default value for **opencti-connector-parser.env**
-
-```bash
-OPENCTI_URL=http://opencti:8080
-OPENCTI_API_KEY=c5512621-e446-4ae8-bcab-cbd400ea9ea0
-KAFKA_URL=broker:29092
-KAFKA_CONSUMER_GROUP_ID=opencti-parser
-KAFKA_TOPIC=opencti_events
-```
-
-You may change each variable's value to connect to defense center.
 
 > :key:  **NOTE:** To get your API key, go to your Profile > API access. Refer to the [OpenCTI Integrations Authentication documentation](https://docs.opencti.io/latest/deployment/integrations/#authentication)
 

@@ -345,7 +345,7 @@ groupId="installation-method"
 1. **Preparation**: Clone the repository and navigate to the `defense_center` directory.
 
    ```bash
-   git clone https://github.com/mata-elang-stable/example-docker-deployment.git && cd defense_center
+   git clone https://github.com/mata-elang-stable/example-docker-deployment.git && cd example-docker-deployment/defense_center
    ```
 
 2. **Configuration**: Copy the example configuration file and update the configuration settings.
@@ -466,7 +466,7 @@ groupId="installation-method"
 1. Clone the example deployment repository and navigate to the `sensor_snort` directory.
 
    ```bash
-   git clone https://github.com/mata-elang-stable/example-docker-deployment.git && cd sensor_snort
+   git clone https://github.com/mata-elang-stable/example-docker-deployment.git && cd example-docker-deployment/sensor_snort
    ```
 
 2. Copy the example configuration file and update the configuration settings.
