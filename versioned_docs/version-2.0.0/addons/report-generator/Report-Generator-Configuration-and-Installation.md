@@ -52,9 +52,9 @@ cd docs/defense_center
 docker compose -f compose.reporting.yml pull
 ```
 
-Wait until pull process is done.
+Wait until pull process is complete.
 
-▶️ After pulling process is done, you can start the services by following this command.
+▶️ After pulling process is complete, you can start the services by following this command.
 
 ```bash
 docker compose -f compose.reporting.yml up -d
@@ -77,6 +77,37 @@ mataelang-redis-1                    valkey/valkey:8                            
 mataelang-report-api-1               ghcr.io/mata-elang-stable/report-api-service:latest                  "/var/www/html/start…"   report-api                     5 days ago   Up 5 days                       9000/tcp
 mataelang-report-command-service-1   ghcr.io/mata-elang-stable/report-command-service:latest              "/go/bin/app"            report-command-service         5 days ago   Up 5 days
 ```
+
+## Setting Up Laravel APP_KEY
+
+#### 1. Generate APP_KEY inside the container
+▶️ Run the following command
+```bash
+docker exec -it mataelang-reporting-report-api-1 php artisan key:generate --show
+```
+It will output something like:
+```bash
+base64:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx=
+```
+
+#### 2. Manually Add **APP_KEY** to .env file
+Edit **.env** file and add the generated key:
+```bash
+APP_KEY=base64:NXcGt92Q+5yl5Vf9P6aE3s6M4hSdfgL5pBYmDQu9OUU=
+```
+
+#### 3. Restart the Container
+To apply the changes, restart the **report-api** service:
+```bash
+docker compose -f compose.reporting.yml down
+docker compose -f compose.reporting.yml up -d
+```
+#### 4. Verify the **APP_KEY**
+Check if Laravel correctly loads the **APP_KEY**:
+```bash
+docker exec -it mataelang-reporting-report-api-1 sh -c "cat /var/www/html/.env | grep APP_KEY"
+```
+If the output contains the correct APP_KEY, Laravel should work without errors.
 
 ## Checking Your Report Generator Service
 
