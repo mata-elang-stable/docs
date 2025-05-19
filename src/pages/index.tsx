@@ -17,7 +17,7 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-        <Translate>{siteConfig.title}</Translate>
+          <Translate>{siteConfig.title}</Translate>
         </Heading>
         <p className="hero__subtitle"><Translate>{siteConfig.tagline}</Translate></p>
         <p className=""><Translate>Mata Elang is the evolution of Mata Garuda Internet Monitoring Project for Indonesia. This project was initialized as private repository in 2018 by LabJarkomC307 - Politeknik Elektronika Negeri Surabaya (PENS). Currently, Mata Elang become one of collaboration research between PENS, Universitas Indonesia and BPPT. This project is supported by JICA.</Translate></p>
@@ -27,6 +27,12 @@ function HomepageHeader() {
             to={`/docs/${versions.sort().reverse()[0]}/quick-start`}>
             <Translate>Quick Start Guide 🚀</Translate>
           </Link>
+        </div>
+        <p className="margin-top--lg"><Translate>In Collaboration With: </Translate></p>
+        <div className={styles.collaborationLogos}>
+            <img src="/img/Logo-jica.png" alt="JICA" className={styles.flexibleLogo} />
+            <img src="/img/Logo-ui.png" alt="UI" className={styles.flexibleLogoUI} />
+            <img src="/img/logo-pens.png" alt="PENS" className={styles.flexibleLogo} />
         </div>
       </div>
     </header>
