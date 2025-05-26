@@ -28,11 +28,26 @@ function HomepageHeader() {
             <Translate>Quick Start Guide 🚀</Translate>
           </Link>
         </div>
-        <p className="margin-top--lg"><Translate>In Collaboration With: </Translate></p>
-        <div className={styles.collaborationLogos}>
-            <img src="/img/Logo-jica.png" alt="JICA" className={styles.flexibleLogo} />
-            <img src="/img/Logo-ui.png" alt="UI" className={styles.flexibleLogoUI} />
-            <img src="/img/logo-pens.png" alt="PENS" className={styles.flexibleLogo} />
+        <div className={styles.collaborationRow}>
+          <div className={styles.collaborationColumn}>
+            <p className="margin-top--lg">
+              <Translate>In Collaboration With: </Translate>
+            </p>
+            <div className={styles.collaborationLogos}>
+              <img src="/img/Logo-jica.png" alt="JICA" className={styles.flexibleLogo} />
+              <img src="/img/Logo-ui.png" alt="UI" className={styles.flexibleLogoUI} />
+              <img src="/img/logo-pens.png" alt="PENS" className={styles.flexibleLogo} />
+            </div>
+          </div>
+          <div className={styles.collaborationColumn}>
+            <p className="margin-top--lg">
+              <Translate>Project Contributor: </Translate>
+            </p>
+            <div className={styles.collaborationLogos}>
+              <img src="/img/logo-pti.png" alt="PTI" className={styles.flexibleLogoPTI} />
+              <img src="/img/logo-shaka.png" alt="Shaka" className={styles.flexibleLogoShaka} />
+            </div>
+          </div>
         </div>
       </div>
     </header>
