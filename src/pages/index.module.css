@@ -28,7 +28,7 @@
 
 .collaborationColumn {
     flex: 1;
-    padding: 0 10px; /* adjust as needed */
+    padding: 0 15px; /* adjust as needed */
 }
 .collaborationLogos {  /* Styles for the new wrapper */
   gap: 0; /* Removes gap between columns */
@@ -63,6 +63,15 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 10px;
+  height: auto;
+}
+
+.flexibleLogoTM {
+  width: 65%;
+  max-width: 180px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 45px;
   height: auto;
 }
 
