@@ -46,6 +46,7 @@ function HomepageHeader() {
             <div className={styles.collaborationLogos}>
               <img src="/img/logo-pti.png" alt="PTI" className={styles.flexibleLogoPTI} />
               <img src="/img/logo-shaka.png" alt="Shaka" className={styles.flexibleLogoShaka} />
+              <img src="/img/logo-tm.png" alt="Trustmedis" className={styles.flexibleLogoTM} />
             </div>
           </div>
         </div>
