@@ -69,7 +69,7 @@ nano .env
 ```
 
 🔑 Default **.env** file looks like this.
-
+> Password requirements: Minimum 8 characters, with uppercase, lowercase, and special characters.
 ```bash
 ###################################################
 # Mata Elang Core Defense Center configuration file.
