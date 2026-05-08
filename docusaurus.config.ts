@@ -212,7 +212,7 @@ const config: Config = {
           items: [
             {
               label: "Cyber Security Research Group (CSRG) - PENS",
-              href: "https://pens.ac.id",
+              href: "https://c307.pens.ac.id",
             },
             {
               label: "Discord",
