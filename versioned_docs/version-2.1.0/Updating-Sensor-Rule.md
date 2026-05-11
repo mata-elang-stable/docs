@@ -6,7 +6,7 @@ sidebar_position: 8
 ## Open Sensor Enviroment
 
 ```bash
-cd docs/sensor_snort
+cd example-docker-deployment/sensor_snort
 nano .env
 ```
 
@@ -58,7 +58,7 @@ RULESET=community
 
 There are multiple ways to set sensor ruleset, using Community Rules `community` and Registered Rules `registered`, and LightSPD Rules `lightspd`
 
-:key: comunity, registered, and lightspd.
+:key: community, registered, and lightspd.
 
 - `community` refer to all rules that have been submitted by members of the open source community or Snort Integrators.
 
