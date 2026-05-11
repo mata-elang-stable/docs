@@ -22,16 +22,30 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     margin-top: 30px;
+    gap: 10px;
 }
 
 .collaborationColumn {
     flex: 1;
-    padding: 0 15px; /* adjust as needed */
+    display: flex;
+    flex-direction: column;
 }
-.collaborationLogos {  /* Styles for the new wrapper */
-  gap: 0; /* Removes gap between columns */
+
+.collaborationTitle {
+    color: #ffffff;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.collaborationLogos {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  padding: 1rem 0.5rem;
+  gap: 0;
 }
 .logoCol {
   padding-left: 20px;

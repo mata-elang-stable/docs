@@ -30,7 +30,7 @@ function HomepageHeader() {
         </div>
         <div className={styles.collaborationRow}>
           <div className={styles.collaborationColumn}>
-            <p className="margin-top--lg">
+            <p className={styles.collaborationTitle}>
               <Translate>In Collaboration With: </Translate>
             </p>
             <div className={styles.collaborationLogos}>
@@ -40,7 +40,7 @@ function HomepageHeader() {
             </div>
           </div>
           <div className={styles.collaborationColumn}>
-            <p className="margin-top--lg">
+            <p className={styles.collaborationTitle}>
               <Translate>Project Contributor: </Translate>
             </p>
             <div className={styles.collaborationLogos}>
