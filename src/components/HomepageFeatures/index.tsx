@@ -11,32 +11,34 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Advanced Intrusion Detection',
+    Svg: require('@site/static/img/image-1.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Mata Elang integrates Snort, a leading Network Intrusion Detection System, 
+        with real-time packet inspection to identify malicious activities and security breaches.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Big Data Analytics',
+    Svg: require('@site/static/img/image-2.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Built on a scalable big data platform to process massive amounts of network 
+        traffic data efficiently, enabling better detection accuracy, long-term trend 
+        analysis, and real-time correlation of security events.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Seamless Deployment & Scalability',
+    Svg: require('@site/static/img/image-3.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Deploy easily using Docker Compose with distributed architecture that scales 
+        across multiple network nodes. Monitor high-traffic networks efficiently 
+        without performance bottlenecks.
       </>
     ),
   },
