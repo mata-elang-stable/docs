@@ -36,9 +36,9 @@ If you are interested in deploying the Mata Elang Platform locally, you can foll
 
 [Quick Start Guide](quick-start.md)
 
-<!-- #### All Servers
+{/* #### All Servers
 
-1. [Time Zone and NTP](/mata-elang-stable/mataelang-platform/wiki/time-zone-and-ntp) -->
+1. [Time Zone and NTP](/mata-elang-stable/mataelang-platform/wiki/time-zone-and-ntp) */}
 
 ### Sensor Installation and Configuration
 

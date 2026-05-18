@@ -24,13 +24,13 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to={`/docs/${versions.sort().reverse()[0]}/quick-start`}>
+            to="/docs/2.0.0/quick-start">
             <Translate>Quick Start Guide 🚀</Translate>
           </Link>
         </div>
         <div className={styles.collaborationRow}>
           <div className={styles.collaborationColumn}>
-            <p className="margin-top--lg">
+            <p className={styles.collaborationTitle}>
               <Translate>In Collaboration With: </Translate>
             </p>
             <div className={styles.collaborationLogos}>
@@ -40,7 +40,7 @@ function HomepageHeader() {
             </div>
           </div>
           <div className={styles.collaborationColumn}>
-            <p className="margin-top--lg">
+            <p className={styles.collaborationTitle}>
               <Translate>Project Contributor: </Translate>
             </p>
             <div className={styles.collaborationLogos}>
