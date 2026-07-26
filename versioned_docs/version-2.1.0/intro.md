@@ -8,6 +8,12 @@ sidebar_position: 1
 
 Mata Elang is the evolution of the Mata Garuda Internet Monitoring Project for Indonesia. This project was initialized as a private repository in 2018 by Cyber Security Research Group (CSRG) - Politeknik Elektronika Negeri Surabaya (PENS). Currently, Mata Elang is a collaboration research between PENS, Universitas Indonesia (UI), and Badan Riset dan Inovasi Nasional (BRIN)with supports from Japan International Cooperation Agency (JICA).
 
+## About Mata Elang version-2.1.0
+The Cyber ​​Security Research Group of the Polytechnic Elektronika Negeri Surabaya and the Fairness Research Group at the Universitas Indonesia are proud to officially present Mata Elang Stable Release version 2.1, the latest update to their open-source Network Intrusion Detection System (NIDS) platform.
+With the approval of the Mata Elang OSS Projects Board of Directors, the development of the Mata Elang Community CSRG PENS was designated as Mata Elang Stable Release version 2.1. This version features several important enhancements, particularly in the security of inter-component communications through the implementation of mutual TLS (mTLS), more structured certificate management, an update of the Docker sensor image to "v2.1-debian," and improvements to the Defense Center component.
+With these enhancements, Mata Elang version 2.1 can also be an alternative solution for Security Operations Centers (SOCs) in supporting the monitoring, detection, and security of Intra-Government Networks. Its presence is expected to further strengthen the national cybersecurity ecosystem through an open-source solution that is adaptive, transparent, and easily scalable to operational needs.
+This release was developed by the Elang Community CSRG PENS Research Team, led by Dr. Ferry Astika S. as Research Team Leader. The core team consists of Fadhil Yori, M. Alfiyan, Rifky Yudha, and M. Izzat, with support from Krisna Wahyu, M. Prajitno, and M. Azis.
+
 ## Key Features
 
 - 🚀 **Effortless Setup**: Mata Elang provides a seamless deployment experience using Docker Compose, making it easy to install and manage across different environments. Whether you're deploying on a single machine or a cloud-based infrastructure, the setup process is streamlined to reduce complexity and ensure a quick start.
