@@ -2,7 +2,7 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
- .heroBanner {
+.heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
@@ -19,83 +19,169 @@
   justify-content: center;
 }
 .collaborationRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    margin-top: 30px;
-    gap: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 30px;
+  gap: 40px;
 }
 
 .collaborationColumn {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .collaborationTitle {
-    color: #ffffff;
-    margin-top: 15px;
-    margin-bottom: 8px;
+  color: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 8px;
 }
 
 .collaborationLogos {
-  flex: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffff;
   border-radius: 1rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
-  padding: 0rem 0rem;
-  gap: 1;
+  padding: 20px 18px;
+  min-height: 156px;
+  gap: 18px;
 }
+
+.logoSliderContainer {
+  padding: 20px 14px;
+}
+
+.logoSliderViewport {
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000000 6%,
+    #000000 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(to right, transparent 0%, #000000 6%, #000000 94%, transparent 100%);
+}
+
+.logoSliderTrack {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: slideLogos 20s linear infinite;
+}
+
+.logoSliderViewport:hover .logoSliderTrack {
+  animation-play-state: paused;
+}
+
+.logoSliderGroup {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-right: 40px;
+  flex-shrink: 0;
+}
+
+@keyframes slideLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .logoCol {
   padding-left: 10px;
   padding-right: 20px;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 .flexibleLogoUI {
-  width: 30%;
-  max-width: 100px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 5px;
-  height: auto;
+  height: 112px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .flexibleLogoPTI {
-  width: 50%;
-  max-width: 130px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-bottom: 35px;
-  padding-top: 5px;
-  height: auto;
+  height: 94px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .flexibleLogoShaka {
-  width: 50%;
-  max-width: 160px;
-  padding-left: 16px;
-  padding-right: 8px;
-  padding-bottom: 5px;
-  height: auto;
+  height: 146px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin: -22px 0;
 }
 
 .flexibleLogoTM {
-  width: 65%;
-  max-width: 180px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-bottom: 45px;
-  height: auto;
+  height: 58px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .flexibleLogo {
-  width: 30%;
-  max-width: 120px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-bottom: 10px;
-  padding-top: 15px;
-  height: auto;
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.flexibleLogoUnsri {
+  height: 108px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.flexibleLogoSSMI {
+  height: 76px;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 996px) {
+  .collaborationRow {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .collaborationLogos {
+    flex-wrap: wrap;
+  }
+
+  .logoSliderContainer {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logoSliderViewport {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .logoSliderTrack {
+    animation: none;
+  }
+
+  .logoSliderGroup[aria-hidden="true"] {
+    display: none;
+  }
 }
